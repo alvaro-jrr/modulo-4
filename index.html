@@ -3,38 +3,574 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Módulo 4</title>
+    <link href="./styles/output.css" rel="stylesheet" />
+    <title>Alvaro Resplandor</title>
   </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li>
-            <a href="#">Inicio</a>
-          </li>
 
-          <li>
-            <a href="#">Sobre Mi</a>
-          </li>
+  <body class="min-h-screen scroll-smooth bg-background antialiased">
+    <div class="relative min-h-screen">
+      <!-- Header -->
+      <header
+        class="sticky top-0 z-50 flex w-full items-center bg-background/95 py-2.5 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+      >
+        <nav class="container flex items-center justify-between">
+          <!-- Logo. -->
+          <svg
+            width="72"
+            height="28"
+            viewBox="0 0 70 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>AR</title>
+            <path
+              d="M8.096 3.192L9.968 5.352L2.12 10.872V9.672L9.968 15.168L8.096 17.328L0.08 11.544V9L8.096 3.192ZM11.5749 18L16.8789 2.424H20.4309L25.5189 18H22.5429L21.4629 14.64H15.6789L14.5749 18H11.5749ZM16.3989 12.504H20.7909L18.6069 5.808L16.3989 12.504ZM28.3023 18V2.424H34.0623C35.9263 2.424 37.3543 2.86 38.3463 3.732C39.3463 4.604 39.8463 5.76 39.8463 7.2C39.8463 8.616 39.3463 9.76 38.3463 10.632C37.3543 11.496 35.9263 11.928 34.0623 11.928H31.1343V18H28.3023ZM36.7263 18L32.5983 10.704H35.6223L40.4223 18H36.7263ZM31.1343 10.032H33.7743C34.8143 10.032 35.6023 9.796 36.1383 9.324C36.6743 8.844 36.9423 8.224 36.9423 7.464C36.9423 6.688 36.6983 6.064 36.2103 5.592C35.7223 5.112 35.0063 4.872 34.0623 4.872H31.1343V10.032ZM48.8579 19.92L55.0259 0.119998H57.9299L51.7139 19.92H48.8579ZM61.8583 17.328L59.9863 15.168L67.8103 9.672V10.872L59.9863 5.352L61.8583 3.192L69.8743 9V11.544L61.8583 17.328Z"
+              fill="currentColor"
+            ></path>
+          </svg>
 
-          <li>
-            <a href="#">Contacto</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <!--About me-->
-    <section id="aboutme" class="aboutme">
-      <div class="content-section">
-        <h2>Sobre Mi</h2>
-        <p>
-          <span> Hi, I'm Alvaro </span>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora
-          facere dolorem, iure deserunt quae in natus aspernatur excepturi
-          voluptatum, dignissimos sit temporibus magnam eum cumque recusandae
-          adipisci suscipit iste maxime!
-        </p>
-      </div>
-    </section>
+          <!-- Desktop Navigation. -->
+          <ul class="hidden md:flex">
+            <li>
+              <a
+                href="#about"
+                class="block px-4 py-2 font-medium text-muted-foreground transition-colors hover:text-foreground"
+              >
+                Sobre mi
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#expirience"
+                class="block px-4 py-2 font-medium text-muted-foreground transition-colors hover:text-foreground"
+              >
+                Experiencia
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#projects"
+                class="block px-4 py-2 font-medium text-muted-foreground transition-colors hover:text-foreground"
+              >
+                Proyectos
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Main -->
+      <main>
+        <!-- Hero -->
+        <section class="container py-24">
+          <div class="grid grid-cols-1 md:grid-cols-2">
+            <div class="flex flex-col gap-6">
+              <div class="space-y-2">
+                <h1 class="text-4xl font-bold text-foreground">
+                  Alvaro Resplandor
+                </h1>
+
+                <p class="text-2xl text-muted-foreground">
+                  Desarrollador Web y de Aplicaciones Móviles
+                </p>
+              </div>
+
+              <a
+                href="./resources/cv.pdf"
+                download="Alvaro Resplandor - CV"
+                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-fit"
+              >
+                <span>Descargar CV</span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-download ml-2 h-4 w-4"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" x2="12" y1="15" y2="3"></line>
+                </svg>
+              </a>
+
+              <!-- Social Media -->
+              <div class="flex gap-x-4">
+                <a
+                  class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10"
+                  href="mailto:alvarojrr79@gmail.com"
+                  target="_blank"
+                  variant="ghost"
+                  size="icon"
+                >
+                  <span class="sr-only">Enviar correo</span>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <title>Correo</title>
+                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                  </svg>
+                </a>
+
+                <a
+                  class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10"
+                  href="https://github.com/alvaro-jrr"
+                  target="_blank"
+                  variant="ghost"
+                  size="icon"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title>GitHub</title>
+                    <path
+                      fill="currentColor"
+                      d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                    ></path>
+                  </svg>
+
+                  <span class="sr-only">Github</span>
+                </a>
+
+                <a
+                  class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10"
+                  href="https://www.linkedin.com/in/alvaro-resplandor-rodriguez-6a7a4824a/"
+                  target="_blank"
+                  variant="ghost"
+                  size="icon"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title>LinkedIn</title>
+                    <path
+                      fill="currentColor"
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                    ></path>
+                  </svg>
+
+                  <span class="sr-only">LinkedIn</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Profile -->
+            <div class="hidden md:grid md:place-content-center">
+              <img
+                src="./assets/profile.png"
+                class="overflow-clip rounded-full"
+                alt="Imagen de perfil"
+                loading="eager"
+                width="300"
+                height="300"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- About me -->
+        <section class="container py-24">
+          <h2 id="about" class="mb-6 text-3xl font-bold">Sobre mi</h2>
+
+          <div class="space-y-6 md:max-w-[70ch]">
+            <div class="space-y-4">
+              <p>
+                ¡Hola! Mi nombre es Alvaro Resplandor. Inicié en el desarrollo
+                web hace más de 3 años, desde entonces he creado diferentes
+                páginas y sistemas. Actualmente estoy trabajando como
+                desarrollador de aplicaciones móviles con Flutter.
+              </p>
+
+              <p>
+                Soy estudiante de Ingeniería en Informática y me mantengo en
+                constante aprendizaje de las últimas tecnologías y tendencias.
+                He aqui algunas de las tecnologías con las que he trabajado:
+              </p>
+            </div>
+
+            <ul class="grid grid-cols-1 gap-2 md:grid-cols-2">
+              <li class="ml-4 list-disc">JavaScript</li>
+              <li class="ml-4 list-disc">TypeScript</li>
+              <li class="ml-4 list-disc">Flutter</li>
+              <li class="ml-4 list-disc">PHP</li>
+              <li class="ml-4 list-disc">Laravel</li>
+            </ul>
+          </div>
+
+          <!-- Profile -->
+          <img
+            src="./assets/profile.png"
+            class="overflow-clip rounded-full mx-auto mt-6 md:hidden"
+            alt="Imagen de perfil"
+            loading="lazy"
+            decoding="async"
+            width="300"
+            height="300"
+          />
+        </section>
+
+        <!-- Expirience -->
+        <section class="container py-24">
+          <h2 class="mb-6 text-3xl font-bold" id="expirience">Experiencia</h2>
+
+          <div class="flex max-w-[70ch] flex-col gap-6">
+            <div class="w-full space-y-4 border-l-2 py-4 pl-4">
+              <div class="flex justify-between">
+                <div class="space-y-1">
+                  <h3 class="text-xl font-semibold text-foreground">
+                    CORPOELEC, S.A.
+                  </h3>
+
+                  <p class="text-muted-foreground">Desarrollador Web</p>
+
+                  <p class="text-muted-foreground sm:hidden">
+                    2020 - Actualidad
+                  </p>
+                </div>
+
+                <p class="hidden text-muted-foreground sm:block">
+                  2020 - Actualidad
+                </p>
+              </div>
+
+              <p>
+                Desarrollé un sistema para la gestión de los datos
+                climatológicos medidos y una página para la vista rápida de la
+                información de los caudales.
+              </p>
+            </div>
+
+            <div class="w-full space-y-4 border-l-2 py-4 pl-4">
+              <div class="flex justify-between">
+                <div class="space-y-1">
+                  <h3 class="text-xl font-semibold text-foreground">
+                    Nolatech
+                  </h3>
+
+                  <p class="text-muted-foreground">Mobile Developer</p>
+
+                  <p class="text-muted-foreground sm:hidden">
+                    2023 - Actualidad
+                  </p>
+                </div>
+
+                <p class="hidden text-muted-foreground sm:block">
+                  2023 - Actualidad
+                </p>
+              </div>
+
+              <p>
+                Desarrollo diversas aplicaciones móviles con el uso de Flutter.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="container py-24">
+          <h2 class="mb-6 text-3xl font-bold" id="projects">Proyectos</h2>
+
+          <div class="grid grid-cols-1 gap-x-4 gap-y-6 md:grid-cols-3">
+            <!-- Pokedex -->
+            <article
+              class="overflow-hidden rounded-md bg-slate-50 transition-transform"
+            >
+              <div class="relative w-full overflow-hidden rounded-md">
+                <a
+                  target="_blank"
+                  href="https://github.com/alvaro-jrr/pokedex_app"
+                  class="absolute inset-0 grid place-content-center bg-foreground/60 text-white opacity-0 transition-opacity hover:opacity-100"
+                >
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title>GitHub</title>
+                    <path
+                      fill="currentColor"
+                      d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                    ></path>
+                  </svg>
+
+                  <span class="sr-only">Visitar repositorio</span>
+                </a>
+
+                <image
+                  src="./assets/pokedex.jpg"
+                  height="300"
+                  loading="eager"
+                  class="aspect-video w-full object-cover"
+                  alt="Vistazo del proyecto Pokedex"
+                />
+              </div>
+
+              <div class="space-y-4 p-4">
+                <div class="space-y-2">
+                  <h3 class="text-xl font-semibold">Pokedex</h3>
+
+                  <p>App para buscar y guardar tus pokemones favoritos.</p>
+                </div>
+
+                <div class="flex gap-2">
+                  <div class="text-sky-400">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 1024 1024"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <title>Flutter</title>
+                      <path
+                        fill="currentColor"
+                        d="M610.73 0 98.134 512 256 669.867 925.184.512H611.285L610.731 0zm.598 472.405L335.232 747.904l276.053 276.053h314.582L650.24 747.99l275.627-275.626H611.37z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Giphy -->
+            <article
+              class="overflow-hidden rounded-md bg-slate-50 transition-transform"
+            >
+              <div class="relative w-full overflow-hidden rounded-md">
+                <a
+                  target="_blank"
+                  href="https://github.com/alvaro-jrr/giphy-react-app"
+                  class="absolute inset-0 grid place-content-center bg-foreground/60 text-white opacity-0 transition-opacity hover:opacity-100"
+                >
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title>GitHub</title>
+                    <path
+                      fill="currentColor"
+                      d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                    ></path>
+                  </svg>
+
+                  <span class="sr-only">Visitar repositorio</span>
+                </a>
+
+                <image
+                  src="./assets/giphy_app.jpg"
+                  height="300"
+                  loading="eager"
+                  class="aspect-video w-full object-cover"
+                  alt="Vistazo del proyecto Giphy App"
+                />
+              </div>
+
+              <div class="space-y-4 p-4">
+                <div class="space-y-2">
+                  <h3 class="text-xl font-semibold">Giphy App</h3>
+
+                  <p>App para buscar y ver gifs con el uso de la Giphy API.</p>
+                </div>
+
+                <div class="flex gap-2">
+                  <!-- JavaScript -->
+                  <div class="text-yellow-400">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <title>JavaScript</title>
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
+                      <path d="M7.5 8h3v8l-2 -1"></path>
+                      <path
+                        d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5"
+                      ></path>
+                    </svg>
+                  </div>
+
+                  <!-- React -->
+                  <div class="text-blue-400">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <title>React</title>
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path
+                        d="M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102"
+                      ></path>
+                      <path
+                        d="M17.692 15.289c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102"
+                      ></path>
+                      <path
+                        d="M6.305 15.287c-.676 2.615 -.485 4.693 .695 5.373c1.913 1.105 5.703 -1.877 8.464 -6.66c.387 -.67 .733 -1.339 1.036 -2"
+                      ></path>
+                      <path
+                        d="M17.694 8.716c.677 -2.616 .487 -4.696 -.694 -5.376c-1.913 -1.105 -5.703 1.877 -8.464 6.66c-.387 .67 -.733 1.34 -1.037 2"
+                      ></path>
+                      <path
+                        d="M12 5.424c-1.925 -1.892 -3.82 -2.766 -5 -2.084c-1.913 1.104 -1.226 5.877 1.536 10.66c.386 .67 .793 1.304 1.212 1.896"
+                      ></path>
+                      <path
+                        d="M12 18.574c1.926 1.893 3.821 2.768 5 2.086c1.913 -1.104 1.226 -5.877 -1.536 -10.66c-.375 -.65 -.78 -1.283 -1.212 -1.897"
+                      ></path>
+                      <path
+                        d="M11.5 12.866a1 1 0 1 0 1 -1.732a1 1 0 0 0 -1 1.732z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Markdown Editor -->
+            <article
+              class="overflow-hidden rounded-md bg-slate-50 transition-transform"
+            >
+              <div class="relative w-full overflow-hidden rounded-md">
+                <a
+                  target="_blank"
+                  href="https://github.com/alvaro-jrr/markdown-editor"
+                  class="absolute inset-0 grid place-content-center bg-foreground/60 text-white opacity-0 transition-opacity hover:opacity-100"
+                >
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <title>GitHub</title>
+                    <path
+                      fill="currentColor"
+                      d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                    ></path>
+                  </svg>
+
+                  <span class="sr-only">Visitar repositorio</span>
+                </a>
+
+                <image
+                  src="./assets/markdown_editor.jpg"
+                  height="300"
+                  loading="eager"
+                  class="aspect-video w-full object-cover"
+                  alt="Vistazo del proyecto Editor de Markdown"
+                />
+              </div>
+
+              <div class="space-y-4 p-4">
+                <div class="space-y-2">
+                  <h3 class="text-xl font-semibold">Editor de Markdown</h3>
+
+                  <p>App para escribir Markdown y ver la previsualización.</p>
+                </div>
+
+                <div class="flex gap-2">
+                  <!-- JavaScript -->
+                  <div class="text-yellow-400">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <title>JavaScript</title>
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
+                      <path d="M7.5 8h3v8l-2 -1"></path>
+                      <path
+                        d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5"
+                      ></path>
+                    </svg>
+                  </div>
+
+                  <!-- React -->
+                  <div class="text-blue-400">
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <title>React</title>
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path
+                        d="M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102"
+                      ></path>
+                      <path
+                        d="M17.692 15.289c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102"
+                      ></path>
+                      <path
+                        d="M6.305 15.287c-.676 2.615 -.485 4.693 .695 5.373c1.913 1.105 5.703 -1.877 8.464 -6.66c.387 -.67 .733 -1.339 1.036 -2"
+                      ></path>
+                      <path
+                        d="M17.694 8.716c.677 -2.616 .487 -4.696 -.694 -5.376c-1.913 -1.105 -5.703 1.877 -8.464 6.66c-.387 .67 -.733 1.34 -1.037 2"
+                      ></path>
+                      <path
+                        d="M12 5.424c-1.925 -1.892 -3.82 -2.766 -5 -2.084c-1.913 1.104 -1.226 5.877 1.536 10.66c.386 .67 .793 1.304 1.212 1.896"
+                      ></path>
+                      <path
+                        d="M12 18.574c1.926 1.893 3.821 2.768 5 2.086c1.913 -1.104 1.226 -5.877 -1.536 -10.66c-.375 -.65 -.78 -1.283 -1.212 -1.897"
+                      ></path>
+                      <path
+                        d="M11.5 12.866a1 1 0 1 0 1 -1.732a1 1 0 0 0 -1 1.732z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
